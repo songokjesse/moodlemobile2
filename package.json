@@ -19,7 +19,8 @@
   ],
   "dependencies": {
     "electron-windows-notifications": "^1.1.13",
-    "electron-builder-squirrel-windows": "^19.3.0"
+    "electron-builder-squirrel-windows": "^19.3.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "appium": "^1.6.0",
@@ -68,7 +69,9 @@
     "e2e": "protractor e2e/build/protractor.conf.js",
     "desktop.pack": "build --dir",
     "desktop.dist": "build",
-    "windows.store": "electron-windows-store --input-directory .\\desktop\\dist\\win-unpacked --output-directory .\\desktop\\store --flatten true -a .\\resources\\desktop -m .\\desktop\\assets\\windows\\AppXManifest.xml --package-version 0.0.0.0 --package-name MoodleDesktop"
+    "windows.store": "electron-windows-store --input-directory .\\desktop\\dist\\win-unpacked --output-directory .\\desktop\\store --flatten true -a .\\resources\\desktop -m .\\desktop\\assets\\windows\\AppXManifest.xml --package-version 0.0.0.0 --package-name MoodleDesktop",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "www/electron.js",
   "build": {
@@ -116,5 +119,6 @@
     "snap": {
       "confinement": "classic"
     }
-  }
+  },
+  "snyk": true
 }
