@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "electron-windows-notifications": "^3.0.1",
-    "electron-builder-squirrel-windows": "^20.35.0"
+    "electron-builder-squirrel-windows": "^26.0.3"
   },
   "devDependencies": {
     "appium": "^1.6.0",
